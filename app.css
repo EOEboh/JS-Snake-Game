@@ -1,0 +1,40 @@
+.grid{
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    height: 200px;
+    border: solid;
+}
+.grid div{
+    width: 20px;
+    height: 20px;
+}
+.snake{
+    background-color: blue;
+}
+.food{
+    background-color: red;
+}
+.End-Modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+.End-Modal:target{
+    visibility: visible;
+    opacity: 1;
+}
+.show {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+.End-Modal p{
+    cursor: pointer;
+
+}
