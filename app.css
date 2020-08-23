@@ -31,9 +31,11 @@ code{
 
 .snake{
     background-color: blue;
+    border-radius: 1rem;
 }
 .food{
     background-color: red;
+    border-radius: 1rem;
 }
 .End-Modal{
     position: fixed;
