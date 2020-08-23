@@ -26,6 +26,7 @@ intervalTime = 1000;
 currentSnake = [2,1,0];
 currentIndex = 0;
 currentSnake.forEach(index => squares[index].classList.add('snake'));
+currentSnake.forEach( index => squares[index].classList.add('snakyBody'))
 interval = setInterval(moveOutcome, intervalTime);
 
 }
@@ -45,15 +46,16 @@ function moveOutcome(){
     ) {
         modal.classList.add('show');
         closeModal();
+        let scoreDisplay = document.getElementById('scoreDisplay');
+        scoreDisplay.innerText = score;
         return clearInterval(interval); // this will clear interval if any of the conditions above happen
         
     }
+    // the game-over popup after the end of the game
     function closeModal(){
         closeIcon = document.getElementById('closeIcon');
         closeIcon.addEventListener('click', function (){
-            modal.classList.remove('show');
-            
-            
+            modal.classList.remove('show');    
         });
     }
 
